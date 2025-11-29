@@ -4,7 +4,7 @@ import { Mail, Phone, Calendar, Github, Linkedin, FileDown, FileText } from "luc
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { jsPDF } from "jspdf"
+import jsPDF from "jspdf"
 
 export default function CVPage() {
   const handleDownloadPDF = async () => {
@@ -77,23 +77,28 @@ export default function CVPage() {
         img.crossOrigin = "anonymous"
         img.onload = () => {
           const canvas = document.createElement("canvas")
-          const size = Math.min(img.width, img.height)
-          canvas.width = size
-          canvas.height = size
+          // Reducir el tamaño de la imagen a 200x200px para optimizar
+          const targetSize = 200
+          canvas.width = targetSize
+          canvas.height = targetSize
           const ctx = canvas.getContext("2d")
           if (ctx) {
             // Dibujar círculo de recorte
             ctx.beginPath()
-            ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2)
+            ctx.arc(targetSize / 2, targetSize / 2, targetSize / 2, 0, Math.PI * 2)
             ctx.closePath()
             ctx.clip()
 
-            // Dibujar la imagen centrada en el círculo
+            // Calcular dimensiones para mantener aspecto y centrar
+            const size = Math.min(img.width, img.height)
             const offsetX = (img.width - size) / 2
             const offsetY = (img.height - size) / 2
-            ctx.drawImage(img, -offsetX, -offsetY, img.width, img.height)
 
-            resolve(canvas.toDataURL("image/png"))
+            // Dibujar la imagen escalada y centrada en el círculo
+            ctx.drawImage(img, offsetX, offsetY, size, size, 0, 0, targetSize, targetSize)
+
+            // Convertir a JPEG con compresión para reducir tamaño (0.6 = 60% calidad)
+            resolve(canvas.toDataURL("image/jpeg", 0.6))
           } else {
             reject("Canvas context not available")
           }
@@ -118,7 +123,7 @@ export default function CVPage() {
       doc.setFillColor(255, 255, 255)
       doc.circle(photoX + photoSize / 2, photoY + photoSize / 2, photoSize / 2, "F")
 
-      doc.addImage(profileImageData, "PNG", photoX, photoY, photoSize, photoSize)
+      doc.addImage(profileImageData, "JPEG", photoX, photoY, photoSize, photoSize)
 
       // Información del header - ajustar ancho para no solapar con foto
       const headerTextWidth = pageWidth - 2 * margin - photoSize - 15
