@@ -77,12 +77,14 @@ export default function CVPage() {
         img.crossOrigin = "anonymous"
         img.onload = () => {
           const canvas = document.createElement("canvas")
-          // Reducir el tamaño de la imagen a 200x200px para optimizar
           const targetSize = 200
           canvas.width = targetSize
           canvas.height = targetSize
           const ctx = canvas.getContext("2d")
           if (ctx) {
+            ctx.fillStyle = "rgb(37, 99, 235)" // Color azul del header
+            ctx.fillRect(0, 0, targetSize, targetSize)
+
             // Dibujar círculo de recorte
             ctx.beginPath()
             ctx.arc(targetSize / 2, targetSize / 2, targetSize / 2, 0, Math.PI * 2)
@@ -97,7 +99,6 @@ export default function CVPage() {
             // Dibujar la imagen escalada y centrada en el círculo
             ctx.drawImage(img, offsetX, offsetY, size, size, 0, 0, targetSize, targetSize)
 
-            // Convertir a JPEG con compresión para reducir tamaño (0.6 = 60% calidad)
             resolve(canvas.toDataURL("image/jpeg", 0.6))
           } else {
             reject("Canvas context not available")
