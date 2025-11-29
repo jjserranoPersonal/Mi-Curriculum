@@ -77,12 +77,23 @@ export default function CVPage() {
         img.crossOrigin = "anonymous"
         img.onload = () => {
           const canvas = document.createElement("canvas")
-          canvas.width = img.width
-          canvas.height = img.height
+          const size = Math.min(img.width, img.height)
+          canvas.width = size
+          canvas.height = size
           const ctx = canvas.getContext("2d")
           if (ctx) {
-            ctx.drawImage(img, 0, 0)
-            resolve(canvas.toDataURL("image/jpeg"))
+            // Dibujar círculo de recorte
+            ctx.beginPath()
+            ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2)
+            ctx.closePath()
+            ctx.clip()
+
+            // Dibujar la imagen centrada en el círculo
+            const offsetX = (img.width - size) / 2
+            const offsetY = (img.height - size) / 2
+            ctx.drawImage(img, -offsetX, -offsetY, img.width, img.height)
+
+            resolve(canvas.toDataURL("image/png"))
           } else {
             reject("Canvas context not available")
           }
@@ -104,12 +115,10 @@ export default function CVPage() {
       const photoX = pageWidth - margin - photoSize - 5
       const photoY = 13
 
-      // Agregar fondo blanco circular para la foto
       doc.setFillColor(255, 255, 255)
-      doc.circle(photoX + photoSize / 2, photoY + photoSize / 2, photoSize / 2 + 1, "F")
+      doc.circle(photoX + photoSize / 2, photoY + photoSize / 2, photoSize / 2, "F")
 
-      // Agregar la foto circular
-      doc.addImage(profileImageData, "JPEG", photoX, photoY, photoSize, photoSize)
+      doc.addImage(profileImageData, "PNG", photoX, photoY, photoSize, photoSize)
 
       // Información del header - ajustar ancho para no solapar con foto
       const headerTextWidth = pageWidth - 2 * margin - photoSize - 15
