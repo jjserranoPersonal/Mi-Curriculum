@@ -137,7 +137,7 @@ export default function CVPage() {
       // === PERFIL PROFESIONAL ===
       addSectionHeader("PERFIL PROFESIONAL")
       addText(
-        "Profesional proactivo, dinámico y organizado, con habilidades avanzadas en gestión de proyectos, análisis y resolución de problemas. Destacado por su capacidad de adaptación a nuevas tecnologías, comunicación efectiva y excelentes relaciones interpersonales.",
+        "Profesional proactivo, dinámico y organizado, con habilidades avanzadas en gestión de proyectos, análisis y resolución de problemas. Destacado por su capacidad de adaptación a nuevas tecnologías, comunicación efectiva y excelentes relaciones interpersonales.+",
         9,
       )
       yPosition += 2
