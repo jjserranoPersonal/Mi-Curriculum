@@ -152,7 +152,7 @@ export default function CVPage() {
       // === PERFIL PROFESIONAL ===
       addSectionHeader("PERFIL PROFESIONAL")
       addText(
-        "Profesional proactivo, dinámico y organizado, con habilidades avanzadas en gestión de proyectos, análisis y resolución de problemas. Destacado por su capacidad de adaptación a nuevas tecnologías, comunicación efectiva y excelentes relaciones interpersonales.+",
+        "Profesional proactivo, dinámico y organizado, con habilidades avanzadas en gestión de proyectos, análisis y resolución de problemas. Destacado por su capacidad de adaptación a nuevas tecnologías, comunicación efectiva y excelentes relaciones interpersonales.",
         9,
       )
       yPosition += 2
@@ -202,9 +202,9 @@ export default function CVPage() {
         "Experiencia en metodologías ágiles, especialmente Scrum, con conocimientos en la gestión de productos, creación y priorización del product backlog y facilitación de ceremonias ágiles.",
       )
       addBullet(
-        "Uso de inteligencia artificial, utilizando herramientas como Cursor, ChatGPT, Gemini, DeepSeek, Bolt, Vercel (V0Dev), Stitch y NotebookIm agilizando tiempos de entrega",
+        "Uso de inteligencia artificial, utilizando herramientas como Cursor, ChatGPT, Gemini, DeepSeek, Bolt, Vercel (V0Dev), Stitch y Notebooklm",
       )
-      addBullet("Formación en programación y gestión de bases de datos.")
+      addBullet("Conocimiento y aporte de porgramación en Python y gestión de bases de datos.")
       addBullet("Conocimientos avanzados en facturación electrónica.")
       addBullet(
         "Habilidad para ensamblaje y mantenimiento de hardware, incluyendo diagnóstico y reparación de equipos.",
@@ -227,21 +227,57 @@ export default function CVPage() {
       doc.setTextColor(...primaryBlue)
       doc.text("THE FACTORY HKA C.A. Colombia", margin, yPosition)
       doc.setTextColor(...mediumGray)
-      doc.text("07/2021 - Presente", pageWidth - margin - 45, yPosition)
-      yPosition += 6
-      doc.setTextColor(0, 0, 0)
       doc.setFontSize(9)
-      doc.setFont("helvetica", "italic")
-      addText("Proveedor tecnológico autorizado por la DIAN de facturación electrónica", 9, "italic", mediumGray)
-      yPosition += 1
-      addBullet("Desarrollo de nuevos productos aplicando Scrum para mejorar la eficiencia del equipo.")
-      addBullet("Priorización y gestión del Product Backlog, alineado con las necesidades del negocio.")
-      addBullet(
-        "Colaboración con scrum master y equipos de desarrollo para entregar incrementos de valor en cada sprint.",
-      )
-      addBullet("Facilitación de ceremonias Scrum: Refinamientos, Planificaciones, Revisiones y Retrospectivas.")
-      addBullet("Coordinación con stakeholders para definir la visión del producto y asegurar alineación estratégica.")
+      doc.text("07/2021 - Presente", pageWidth - margin - 40, yPosition)
       yPosition += 4
+      doc.setTextColor(...darkGray)
+      doc.setFont("helvetica", "italic")
+      addText("Proveedor tecnológico autorizado por la DIAN de facturación electrónica", 9)
+      yPosition += 3
+
+      doc.setFont("helvetica", "normal")
+      addBullet(
+        "Gestionar las expectativas de los clientes, responsable de maximizar el valor del producto y del trabajo del equipo.",
+      )
+      addBullet("Recibir los requerimientos técnicos y comerciales de los clientes internos y externos.")
+      addBullet(
+        "Realizar inception, mapa de impacto, user story mapping, definir productos mínimos viables, en conjunto con el equipo y los stakeholders.",
+      )
+      addBullet(
+        "Gestionar los cambios asociados a un nuevo proyecto, definir los objetivos del mismo y de seguridad de la información.",
+      )
+      addBullet(
+        "Coordinar las actividades entre las distintas áreas como soporte, integración, calidad, desarrollo proyectos.",
+      )
+      addBullet(
+        "Gestionar los riesgos del proyecto al inicio del mismo, realizar seguimiento de los riesgos inherentes detectados y velar porque los responsables ejecuten los planes de tratamiento.",
+      )
+      addBullet("Escribir historias de usuario refinadas y asegurar que sean comprendidas por el equipo.")
+      addBullet("Definir criterios de aceptación para cada historia de usuario.")
+      addBullet("Gestionar y priorizar el backlog del producto.")
+      addBullet(
+        "Priorizar las características y funcionalidades (historias de usuario), en función del valor para el cliente y el negocio.",
+      )
+      addBullet(
+        "Estar accesible y disponible, para explicar al equipo técnico dudas funcionales, para validar entregas y participar en reuniones.",
+      )
+      addBullet(
+        "Facilitación de ceremonias durante el sprint como: Refinamiento, Planificaciones, Revisiones y Retrospectivas.",
+      )
+      addBullet(
+        "Generar reportes ejecutivos para la gerencia, donde se visualice el status de cada uno de los proyectos.",
+      )
+      addBullet(
+        "Participar en el metascrum apoyando al Gerente de Productos en la generación y aplicación de buenas prácticas en agilidad orientada a la implementación de nuevos productos.",
+      )
+      addBullet("Apoyar en el proceso de generación de métricas del Equipo de Product Owners (metascrum).")
+      addBullet(
+        "Apoyar estableciendo estrategias comerciales en el proceso de lanzamiento y despliegue de los productos.",
+      )
+      addBullet(
+        "Realizar actividades de lanzamiento de productos en caso de que sea designado por la Gerencia de Productos y/o Gerencia General.",
+      )
+      yPosition += 3
 
       doc.setFontSize(11)
       doc.setFont("helvetica", "bold")
@@ -574,6 +610,118 @@ export default function CVPage() {
                   objetivos en entornos dinámicos.
                 </p>
               </div>
+              {/* Start of updates */}
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600">●</span>
+                <p className="text-sm">
+                  Gestionar las expectativas de los clientes, responsable de maximizar el valor del producto y del
+                  trabajo del equipo.
+                </p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600">●</span>
+                <p className="text-sm">
+                  Recibir los requerimientos técnicos y comerciales de los clientes internos y externos
+                </p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600">●</span>
+                <p className="text-sm">
+                  Realizar inception, mapa de impacto, user story mapping, definir productos mínimos viables, en
+                  conjunto con el equipo y los stakeholders.
+                </p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600">●</span>
+                <p className="text-sm">
+                  Gestionar los cambios asociados a un nuevo proyecto, definir los objetivos del mismo y de seguridad de
+                  la información.
+                </p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600">●</span>
+                <p className="text-sm">
+                  Coordinar las actividades entre las distintas áreas como soporte, integración, calidad, desarrollo
+                  proyectos
+                </p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600">●</span>
+                <p className="text-sm">
+                  Gestionar los riesgos del proyecto al inicio del mismo, realizar seguimiento de los riesgos inherentes
+                  detectados y velar porque los responsables ejecuten los planes de tratamiento
+                </p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600">●</span>
+                <p className="text-sm">
+                  Escribir historias de usuario refinadas y asegurar que sean comprendidas por el equipo
+                </p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600">●</span>
+                <p className="text-sm">Definir criterios de aceptación para cada historia de usuario</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600">●</span>
+                <p className="text-sm">Gestionar y priorizar el backlog del producto</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600">●</span>
+                <p className="text-sm">
+                  Priorizar las características y funcionalidades (historias de usuario), en función del valor para el
+                  cliente y el negocio.
+                </p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600">●</span>
+                <p className="text-sm">
+                  Estar accesible y disponible, para explicar al equipo técnico dudas funcionales, para validar entregas
+                  y participar en reuniones.
+                </p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600">●</span>
+                <p className="text-sm">
+                  Facilitación de ceremonias durante el sprint como: Refinamiento, Planificaciones, Revisiones y
+                  Retrospectivas.
+                </p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600">●</span>
+                <p className="text-sm">
+                  Generar reportes ejecutivos para la gerencia, donde se visualice el status de cada uno de los
+                  proyectos.
+                </p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600">●</span>
+                <p className="text-sm">
+                  Participar en el metascrum apoyando al Gerente de Productos en la generación y aplicación de buenas
+                  prácticas en agilidad orientada a la implementación de nuevos productos.
+                </p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600">●</span>
+                <p className="text-sm">
+                  Apoyar en el proceso de generación de métricas del Equipo de Product Owners (metascrum).
+                </p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600">●</span>
+                <p className="text-sm">
+                  Apoyar estableciendo estrategias comerciales en el proceso de lanzamiento y despliegue de los
+                  productos.
+                </p>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600">●</span>
+                <p className="text-sm">
+                  Realizar actividades de lanzamiento de productos en caso de que sea designado por la Gerencia de
+                  Productos y/o Gerencia General.
+                </p>
+              </div>
+              {/* End of updates */}
             </div>
           </CardContent>
         </Card>
@@ -597,32 +745,111 @@ export default function CVPage() {
                   Proveedor tecnológico autorizado por la DIAN de facturación electrónica
                 </p>
                 <ul className="space-y-2 text-sm">
+                  {/* Original responsibilities were here. Replaced by the new list from the updates. */}
                   <li className="flex gap-2">
                     <span className="text-muted-foreground flex-shrink-0">●</span>
-                    <span>Desarrollo de nuevos productos aplicando Scrum para mejorar la eficiencia del equipo.</span>
+                    <span>
+                      Gestionar las expectativas de los clientes, responsable de maximizar el valor del producto y del
+                      trabajo del equipo.
+                    </span>
                   </li>
                   <li className="flex gap-2">
                     <span className="text-muted-foreground flex-shrink-0">●</span>
-                    <span>Priorización y gestión del Product Backlog, alineado con las necesidades del negocio.</span>
+                    <span>Recibir los requerimientos técnicos y comerciales de los clientes internos y externos.</span>
                   </li>
                   <li className="flex gap-2">
                     <span className="text-muted-foreground flex-shrink-0">●</span>
                     <span>
-                      Colaboración con scrum master y equipos de desarrollo para entregar incrementos de valor en cada
-                      sprint.
+                      Realizar inception, mapa de impacto, user story mapping, definir productos mínimos viables, en
+                      conjunto con el equipo y los stakeholders.
                     </span>
                   </li>
                   <li className="flex gap-2">
                     <span className="text-muted-foreground flex-shrink-0">●</span>
                     <span>
-                      Facilitación de ceremonias Scrum: Refinamientos, Planificaciones, Revisiones y Retrospectivas.
+                      Gestionar los cambios asociados a un nuevo proyecto, definir los objetivos del mismo y de
+                      seguridad de la información.
                     </span>
                   </li>
                   <li className="flex gap-2">
                     <span className="text-muted-foreground flex-shrink-0">●</span>
                     <span>
-                      Coordinación con stakeholders para definir la visión del producto y asegurar alineación
-                      estratégica.
+                      Coordinar las actividades entre las distintas áreas como soporte, integración, calidad, desarrollo
+                      proyectos.
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-muted-foreground flex-shrink-0">●</span>
+                    <span>
+                      Gestionar los riesgos del proyecto al inicio del mismo, realizar seguimiento de los riesgos
+                      inherentes detectados y velar porque los responsables ejecuten los planes de tratamiento.
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-muted-foreground flex-shrink-0">●</span>
+                    <span>Escribir historias de usuario refinadas y asegurar que sean comprendidas por el equipo.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-muted-foreground flex-shrink-0">●</span>
+                    <span>Definir criterios de aceptación para cada historia de usuario.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-muted-foreground flex-shrink-0">●</span>
+                    <span>Gestionar y priorizar el backlog del producto.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-muted-foreground flex-shrink-0">●</span>
+                    <span>
+                      Priorizar las características y funcionalidades (historias de usuario), en función del valor para
+                      el cliente y el negocio.
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-muted-foreground flex-shrink-0">●</span>
+                    <span>
+                      Estar accesible y disponible, para explicar al equipo técnico dudas funcionales, para validar
+                      entregas y participar en reuniones.
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-muted-foreground flex-shrink-0">●</span>
+                    <span>
+                      Facilitación de ceremonias durante el sprint como: Refinamiento, Planificaciones, Revisiones y
+                      Retrospectivas.
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-muted-foreground flex-shrink-0">●</span>
+                    <span>
+                      Generar reportes ejecutivos para la gerencia, donde se visualice el status de cada uno de los
+                      proyectos.
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-muted-foreground flex-shrink-0">●</span>
+                    <span>
+                      Participar en el metascrum apoyando al Gerente de Productos en la generación y aplicación de
+                      buenas prácticas en agilidad orientada a la implementación de nuevos productos.
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-muted-foreground flex-shrink-0">●</span>
+                    <span>
+                      Apoyar en el proceso de generación de métricas del Equipo de Product Owners (metascrum).
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-muted-foreground flex-shrink-0">●</span>
+                    <span>
+                      Apoyar estableciendo estrategias comerciales en el proceso de lanzamiento y despliegue de los
+                      productos.
+                    </span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="text-muted-foreground flex-shrink-0">●</span>
+                    <span>
+                      Realizar actividades de lanzamiento de productos en caso de que sea designado por la Gerencia de
+                      Productos y/o Gerencia General.
                     </span>
                   </li>
                 </ul>
