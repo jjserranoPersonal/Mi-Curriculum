@@ -230,14 +230,14 @@ export default function CVPage() {
       doc.setFontSize(9)
       doc.text("07/2021 - Presente", pageWidth - margin - 40, yPosition)
       yPosition += 4
-      doc.setTextColor(...darkGray)
+      doc.setTextColor(0, 0, 0)
       doc.setFont("helvetica", "italic")
       addText("Proveedor tecnológico autorizado por la DIAN de facturación electrónica", 9)
       yPosition += 3
 
       doc.setFont("helvetica", "normal")
       addBullet(
-        "Gestionar las expectativas de los clientes, responsable de maximizar el valor del producto y del trabajo del equipo.",
+        "Gestionar las expectativas de los clientes, responsable de maximizar el valor del producto y del equipo.",
       )
       addBullet("Recibir los requerimientos técnicos y comerciales de los clientes internos y externos.")
       addBullet(
@@ -388,7 +388,7 @@ export default function CVPage() {
       addText("General:", 10, "bold")
       doc.setFont("helvetica", "normal")
       addText(
-        "Scrum, Metodologías Ágiles, Gestión de producto, Facturación electrónica, Integración con servicios Web y Soap",
+        "Scrum, Kanban, Metodologías Ágiles, Gestión de producto, Facturación electrónica, Integración con servicios Web y Soap",
         9,
       )
       yPosition += 2
@@ -396,7 +396,7 @@ export default function CVPage() {
       doc.setFont("helvetica", "bold")
       addText("Lenguajes y Tecnologías:", 10, "bold")
       doc.setFont("helvetica", "normal")
-      addText("Python (FastApi), PHP, SQL, MySQL, SQLAlchemy, HTML, CSS, Git, Soap, Rest", 9)
+      addText("Python, FastApi, PHP, SQL, MySQL, HTML, CSS, Git, Soap, Rest", 9)
       yPosition += 2
 
       doc.setFont("helvetica", "bold")
@@ -610,119 +610,6 @@ export default function CVPage() {
                   objetivos en entornos dinámicos.
                 </p>
               </div>
-              {/* Start of updates */}
-              <div className="flex items-start gap-2">
-                <span className="text-blue-600">●</span>
-                <p className="text-sm">
-                  Gestionar las expectativas de los clientes, responsable de maximizar el valor del producto y del
-                  trabajo del equipo.
-                </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-blue-600">●</span>
-                <p className="text-sm">
-                  Recibir los requerimientos técnicos y comerciales de los clientes internos y externos
-                </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-blue-600">●</span>
-                <p className="text-sm">
-                  Realizar inception, mapa de impacto, user story mapping, definir productos mínimos viables, en
-                  conjunto con el equipo y los stakeholders.
-                </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-blue-600">●</span>
-                <p className="text-sm">
-                  Gestionar los cambios asociados a un nuevo proyecto, definir los objetivos del mismo y de seguridad de
-                  la información.
-                </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-blue-600">●</span>
-                <p className="text-sm">
-                  Coordinar las actividades entre las distintas áreas como soporte, integración, calidad, desarrollo
-                  proyectos
-                </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-blue-600">●</span>
-                <p className="text-sm">
-                  Gestionar los riesgos del proyecto al inicio del mismo, realizar seguimiento de los riesgos inherentes
-                  detectados y velar porque los responsables ejecuten los planes de tratamiento
-                </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-blue-600">●</span>
-                <p className="text-sm">
-                  Escribir historias de usuario refinadas y asegurar que sean comprendidas por el equipo
-                </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-blue-600">●</span>
-                <p className="text-sm">Definir criterios de aceptación para cada historia de usuario</p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-blue-600">●</span>
-                <p className="text-sm">Gestionar y priorizar el backlog del producto</p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-blue-600">●</span>
-                <p className="text-sm">
-                  Priorizar las características y funcionalidades (historias de usuario), en función del valor para el
-                  cliente y el negocio.
-                </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-blue-600">●</span>
-                <p className="text-sm">
-                  Estar accesible y disponible, para explicar al equipo técnico dudas funcionales, para validar entregas
-                  y participar en reuniones.
-                </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-blue-600">●</span>
-                <p className="text-sm">
-                  Facilitación de ceremonias durante el sprint como: Refinamiento, Planificaciones, Revisiones y
-                  Retrospectivas.
-                </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-blue-600">●</span>
-                <p className="text-sm">
-                  Generar reportes ejecutivos para la gerencia, donde se visualice el status de cada uno de los
-                  proyectos.
-                </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-blue-600">●</span>
-                <p className="text-sm">
-                  Participar en el metascrum apoyando al Gerente de Productos en la generación y aplicación de buenas
-                  prácticas en agilidad orientada a la implementación de nuevos productos.
-                </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-blue-600">●</span>
-                <p className="text-sm">
-                  Apoyar en el proceso de generación de métricas del Equipo de Product Owners (metascrum).
-                </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-blue-600">●</span>
-                <p className="text-sm">
-                  Apoyar estableciendo estrategias comerciales en el proceso de lanzamiento y despliegue de los
-                  productos.
-                </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-blue-600">●</span>
-                <p className="text-sm">
-                  Realizar actividades de lanzamiento de productos en caso de que sea designado por la Gerencia de
-                  Productos y/o Gerencia General.
-                </p>
-              </div>
-              {/* End of updates */}
-            </div>
           </CardContent>
         </Card>
 
@@ -745,7 +632,6 @@ export default function CVPage() {
                   Proveedor tecnológico autorizado por la DIAN de facturación electrónica
                 </p>
                 <ul className="space-y-2 text-sm">
-                  {/* Original responsibilities were here. Replaced by the new list from the updates. */}
                   <li className="flex gap-2">
                     <span className="text-muted-foreground flex-shrink-0">●</span>
                     <span>
@@ -1014,6 +900,9 @@ export default function CVPage() {
                     Scrum
                   </Badge>
                   <Badge variant="secondary" className="bg-blue-100 text-blue-700">
+                    Kanban
+                  </Badge>
+                  <Badge variant="secondary" className="bg-blue-100 text-blue-700">
                     Metodologías Ágiles
                   </Badge>
                   <Badge variant="secondary" className="bg-blue-100 text-blue-700">
@@ -1032,7 +921,10 @@ export default function CVPage() {
                 <h3 className="font-bold mb-3">Lenguajes y Tecnologías</h3>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="secondary" className="bg-green-100 text-green-700">
-                    Python (FastApi)
+                    Python
+                  </Badge>
+                  <Badge variant="secondary" className="bg-green-100 text-green-700">
+                    FastApi
                   </Badge>
                   <Badge variant="secondary" className="bg-green-100 text-green-700">
                     Php
@@ -1042,9 +934,6 @@ export default function CVPage() {
                   </Badge>
                   <Badge variant="secondary" className="bg-green-100 text-green-700">
                     MySQL
-                  </Badge>
-                  <Badge variant="secondary" className="bg-green-100 text-green-700">
-                    SQLAlchemy
                   </Badge>
                   <Badge variant="secondary" className="bg-green-100 text-green-700">
                     HTML
@@ -1130,7 +1019,6 @@ export default function CVPage() {
 
             <div className="grid md:grid-cols-2 gap-4">
               <div className="flex items-center gap-3">
-                <div className="text-3xl">🇪🇸</div>
                 <div>
                   <p className="font-bold">Español</p>
                   <Badge variant="secondary" className="bg-blue-100 text-blue-700">
@@ -1140,7 +1028,6 @@ export default function CVPage() {
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="text-3xl">🇬🇧</div>
                 <div>
                   <p className="font-bold">Inglés</p>
                   <Badge variant="secondary" className="bg-gray-100 text-gray-700">
