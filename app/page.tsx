@@ -610,6 +610,7 @@ export default function CVPage() {
                   objetivos en entornos dinámicos.
                 </p>
               </div>
+            </div>
           </CardContent>
         </Card>
 
